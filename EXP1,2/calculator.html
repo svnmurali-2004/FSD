@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .button {
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .calculator {
+            width: 400px;
+            margin: auto;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .ans-display {
+            height: 100px;
+            background-color: white;
+            border: 2px solid black;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            padding: 0 10px;
+            font-size: 36px;
+        }
+        .clear{
+            display:flex;
+            justify-content:end;
+            margin-left: 20px;
+            padding-right: 20px;
+        }
+        .clearbtn{
+            height:20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div id="display" class="ans-display">
+            0
+        </div>
+        <div class="clear"> <button class="clearbtn" onclick="reset()">clear</button></div>
+        <div class="buttons">
+            <div class="button" onclick="press('7')">7</div>
+            <div class="button" onclick="press('8')">8</div>
+            <div class="button" onclick="press('9')">9</div>
+            <div class="button" onclick="press('/')">/</div>
+            <div class="button" onclick="press('4')">4</div>
+            <div class="button" onclick="press('5')">5</div>
+            <div class="button" onclick="press('6')">6</div>
+            <div class="button" onclick="press('*')">*</div>
+            <div class="button" onclick="press('1')">1</div>
+            <div class="button" onclick="press('2')">2</div>
+            <div class="button" onclick="press('3')">3</div>
+            <div class="button" onclick="press('-')">-</div>
+            <div class="button" onclick="press('0')">0</div>
+            <div class="button" onclick="press('.')">.</div>
+            <div class="button" onclick="evaluator()">=</div>
+            <div class="button" onclick="press('+')">+</div>
+        </div>
+    </div>
+
+    <script>
+        function press(param){
+            let data=document.getElementById("display").innerHTML
+            data=data+param
+            document.getElementById("display").innerHTML=data
+        }
+        function evaluator(){
+            data=document.getElementById("display").innerHTML
+            let result 
+            try{
+                result=eval(data)
+                document.getElementById("display").innerHTML=result
+            }catch(err){
+                document.getElementById("display").innerHTML="ERROR"
+            }
+
+        }
+        function reset(){
+            document.getElementById("display").innerHTML="0"
+        }
+    </script>
+</body>
+</html>
