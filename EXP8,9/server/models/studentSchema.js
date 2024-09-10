@@ -16,4 +16,4 @@ section:{
     required:true
 },
 })
-module.exports = mongoose.model('Alien',studentSchema)
+module.exports = mongoose.model('students',studentSchema)

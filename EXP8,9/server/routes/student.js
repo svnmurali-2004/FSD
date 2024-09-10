@@ -25,6 +25,7 @@ router.get('/:id', async (req, res) => {
 // POST a new alien
 router.post('/', async (req, res) => {
     console.log("post method called")
+    console.log(req.body)
   const student = new students({
     name: req.body.name,
     rollnumber: req.body.rollnumber,
@@ -33,8 +34,10 @@ router.post('/', async (req, res) => {
 
   try {
     const a1 = await student.save();
+    console.log(a1)
     res.json(a1);
   } catch (err) {
+    console.log(err)
     res.send('Error: ' + err);
   }
 });
