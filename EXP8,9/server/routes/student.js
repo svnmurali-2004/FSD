@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const students = require('../models/studentSchema');
-
-// GET all aliens
 router.get('/', async (req, res) => {
   try {
     const totalstudents = await students.find();
@@ -11,8 +9,6 @@ router.get('/', async (req, res) => {
     res.send('Error: ' + err);
   }
 });
-
-// GET a specific alien by ID
 router.get('/:id', async (req, res) => {
   try {
     const student = await students.findById(req.params.id);
@@ -21,8 +17,6 @@ router.get('/:id', async (req, res) => {
     res.send('Error: ' + err);
   }
 });
-
-// POST a new alien
 router.post('/', async (req, res) => {
     console.log("post method called")
     console.log(req.body)
@@ -41,8 +35,6 @@ router.post('/', async (req, res) => {
     res.send('Error: ' + err);
   }
 });
-
-// PATCH (update) an alien's subscription status by ID
 router.patch('/:id', async (req, res) => {
   try {
     const student = await students.findById(req.params.id);

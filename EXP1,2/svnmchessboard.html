@@ -1,116 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chess Board</title>
     <style>
-        .chessbox{
-            display:inline-grid;
-            grid-template-columns: repeat(8,auto);
-            column-gap:0px;
-            border:1px solid green;
-
+        .chessbox {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            gap: 0;
         }
-        .black{
-            background-color:black
-        }
-        .chessbox .row:nth-child(even) .box:nth-child(even){
-            background-color:black
-        } 
-        .chessbox .row:nth-child(odd) .box:nth-child(odd){
-            background-color:black
-        } 
-        .chessbox .row
-        .box{
-            width:50px;
-            height:50px;
-            border:1px solid black
-        }
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;}
+        .white {
+            background-color: #f0d9b5;
+            color: black;}
+        .black {
+            background-color: #b58863;
+            color: white;}
     </style>
 </head>
+
 <body>
     <div class="chessbox">
-        <div class="row">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="row">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="row">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="row">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="row">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="row">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="row">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="row">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
+        <div class="box black">♜</div>
+        <div class="box white">♞</div>
+        <div class="box black">♝</div>
+        <div class="box white">♛</div>
+        <div class="box black">♚</div>
+        <div class="box white">♝</div>
+        <div class="box black">♞</div>
+        <div class="box white">♜</div>
+
+        <div class="box white">♟</div>
+        <div class="box black">♟</div>
+        <div class="box white">♟</div>
+        <div class="box black">♟</div>
+        <div class="box white">♟</div>
+        <div class="box black">♟</div>
+        <div class="box white">♟</div>
+        <div class="box black">♟</div>
+
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+
+        <div class="box black">♙</div>
+        <div class="box white">♙</div>
+        <div class="box black">♙</div>
+        <div class="box white">♙</div>
+        <div class="box black">♙</div>
+        <div class="box white">♙</div>
+        <div class="box black">♙</div>
+        <div class="box white">♙</div>
+        <div class="box white">♖</div>
+        <div class="box black">♘</div>
+        <div class="box white">♗</div>
+        <div class="box black">♕</div>
+        <div class="box white">♔</div>
+        <div class="box black">♗</div>
+        <div class="box white">♘</div>
+        <div class="box black">♖</div>
     </div>
 </body>
+
 </html>

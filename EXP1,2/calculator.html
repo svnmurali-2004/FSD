@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,20 +46,23 @@
             padding: 0 10px;
             font-size: 36px;
         }
-        .clear{
-            display:flex;
-            justify-content:end;
+
+        .clear {
+            display: flex;
+            justify-content: end;
             margin-left: 20px;
             padding-right: 20px;
         }
-        .clearbtn{
-            height:40px;
+
+        .clearbtn {
+            height: 40px;
             width: 100px;
             font-size: large;
-            
+
         }
     </style>
 </head>
+
 <body>
     <div class="calculator">
         <div id="display" class="ans-display">
@@ -86,25 +90,26 @@
     </div>
 
     <script>
-        function press(param){
-            let data=document.getElementById("display").innerHTML
-            data=data+param
-            document.getElementById("display").innerHTML=data
+        function press(param) {
+            let data = document.getElementById("display").innerHTML
+            data = data + param
+            document.getElementById("display").innerHTML = data
         }
-        function evaluator(){
-            data=document.getElementById("display").innerHTML
-            let result 
-            try{
-                result=eval(data)
-                document.getElementById("display").innerHTML=result
-            }catch(err){
-                document.getElementById("display").innerHTML="ERROR"
+        function evaluator() {
+            data = document.getElementById("display").innerHTML
+            let result
+            try {
+                result = eval(data)
+                document.getElementById("display").innerHTML = result
+            } catch (err) {
+                document.getElementById("display").innerHTML = "ERROR"
             }
 
         }
-        function reset(){
-            document.getElementById("display").innerHTML="0"
+        function reset() {
+            document.getElementById("display").innerHTML = "0"
         }
     </script>
 </body>
+
 </html>
